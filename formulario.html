@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+
+<body>
+  <form action="cadastro.php" method="get" autocomplete="on">
+
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <label> Nome completo: <br>
+        <input type="text" placeholder="Digite seu nome completo" required>
+      </label>
+      <br><br>
+
+      <label> Email: <br>
+        <input type="email" placeholder="seuemail@exemplo.com" required>
+      </label>
+      <br><br>
+
+      <label> Telefone (formato(XX)XXXXX-XXXX): <br>
+        <input type="tel" placeholder="(11)91234-5678" required>
+      </label>
+      <br><br>
+
+      <label> Crie uma senha: <br>
+        <input type="password" placeholder="Digite sua senha" required autocomplete="current-password">
+      </label>
+      <br><br>
+
+      <label> Idade: <br>
+        <input type="number" placeholder="sua idade" required style="width: 53px;">
+      </label>
+      <br><br>
+
+      <label> Estado de entrega: <br>
+        <select id="api" required>
+          <option value="" selected>--Escolha--</option>
+
+          <optgroup label="Região Norte">
+            <option value="AC">Acre</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="PA">Pará</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="TO">Tocantins</option>
+          </optgroup>
+
+          <optgroup label="Região Nordeste">
+            <option value="AL">Alagoas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="MA">Maranhão</option>
+            <option value="PB">Paraíba</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="SE">Sergipe</option>
+          </optgroup>
+
+          <optgroup label="Região Centro-Oeste">
+            <option value="DF">Distrito Federal</option>
+            <option value="GO">Goiás</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+          </optgroup>
+
+          <optgroup label="Região Sudeste">
+            <option value="ES">Espírito Santo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+          </optgroup>
+
+          <optgroup label="Região Sul">
+            <option value="PR">Paraná</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="SC">Santa Catarina</option>
+          </optgroup>
+        </select>
+      </label>
+      <br><br>
+
+      <label>Envie uma foto da sua CNH:<br>
+        <input type="file" name="foto" id="foto" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Escolha o Carro</legend>
+
+      <label>Escolha o modelo:</label><br>
+
+      <input type="radio" name="carro" id="carro1" value="1" required>
+      <label for="carro1">BYD Seal</label><br>
+
+      <input type="radio" name="carro" id="carro2" value="2" required>
+      <label for="carro2">BYD Han</label><br>
+
+      <input type="radio" name="carro" id="carro3" value="3" required>
+      <label for="carro3">BYD Song Plus</label><br>
+
+      <label>Itens adicionais:</label><br>
+      <input type="checkbox" name="som" id="som" checked required>
+      <label for="som">Som Premium</label><br>
+
+      <input type="checkbox" name="ar" id="ar" checked required>
+      <label for="ar">Ar-condicionado Digital</label><br>
+
+      <input type="checkbox" name="camera" id="camera" checked required>
+      <label for="camera">Câmera 360</label><br>
+
+      <br><br>
+      <label>Cor do carro:</label><br>
+      <input type="color" name="cor" id="cor" value="#00ff00" required>
+      <br><br>
+
+      <label>Intensidade da cor (brilho):</label><br>
+      <input type="range" id="nivel" min="1" max="5" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Entrega</legend>
+
+      <label>Data desejada para entrega:</label><br>
+      <input type="date" name="dia" id="idia" required>
+      <br><br>
+
+      <label>Hora preferida para entrega:</label><br>
+      <input type="time" name="hora" id="ihora" required>
+      <br><br>
+
+      <label>Mês da compra:</label><br>
+      <input type="month" name="mes" id="imes" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sua Opinião</legend>
+      <label>Conte qual é a sua expectativa sobre o carro:</label><br>
+      <textarea name="imsg" id="imsg" cols="50" rows="5" required
+        placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Avaliação dos Modelos BYD</legend>
+      <label>Avalie o BYD Dolphin Plus:</label><br>
+      <input type="number" required style="width: 53px;">
+      <br>
+
+      <label>Avalie o BYD GS:</label><br>
+      <input type="number" required style="width: 53px;">
+      <br>
+
+      <label>Avalie o BYD Mini:</label><br>
+      <input type="number" required style="width: 53px;">
+      <br>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+
+  </form>
+</body>
+
+</html>
